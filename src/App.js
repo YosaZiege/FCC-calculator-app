@@ -7,13 +7,7 @@ function App() {
   const [currentInput, setCurrentInput] = useState("0");
   const [formula, setFormula] = useState("");
   const [calculationData, setCalculationData] = useState("");
-  const handleFormula = () => {
-    setFormula(calculationData);
-    
-  }
-  useEffect(() => {
-    handleFormula()
-  }, [calculationData])
+  
   const handleDecimal = () => {
     const lastChar = calculationData.charAt(calculationData.length - 1);
     if (!calculationData.length) {
